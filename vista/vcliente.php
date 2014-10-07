@@ -1,6 +1,6 @@
 <?php 
     include ("../controlador/ccliente.php");
-    include ("../js/cliente.js");
+    //include ("../js/cliente.js");
 ?>
 
 
