@@ -35,4 +35,20 @@ class mOrdenCompra{
 		$data = $conexionBD->ejeCon($sql,0);
 		return $data;
 	}
+	
+	function selUsuario(){
+		$sql = "SELECT id_usuario, nombre, apellido FROM USUARIO;";
+		$conexionBD = new conexion();
+		$conexionBD->conectarBD();
+		$data = $conexionBD->ejeCon($sql,0);
+		return $data;
+	}
+	
+	function selProveedor(){
+		$sql = "SELECT id_nit, razon_social From proveedor;";
+		$conexionBD = new conexion();
+		$conexionBD->conectarBD();
+		$data = $conexionBD->ejeCon($sql,0);
+		return $data;
+	}
 }

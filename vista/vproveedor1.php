@@ -1,5 +1,5 @@
 <?php 
-    include ("controlador/cproveedor.php");
+    include ("../controlador/cproveedor.php");
 ?>
 <center>
 	<form name="form2" action="vproveedor.php" method="POST" >

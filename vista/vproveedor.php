@@ -1,5 +1,5 @@
 <?php 
-    include ("controlador/cproveedor.php");
+    include ("../controlador/cproveedor.php");
 ?>
 
 
