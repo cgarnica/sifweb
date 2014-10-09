@@ -1,10 +1,10 @@
 <?php 
-    include ("../controlador/cproveedor.php");
+    include ("controlador/cproveedor.php");
 ?>
 
 
 
-<script language="javascript" src="../../Sifweb/js/jquery-1.2.6.min.js"></script><!-- llamamos al JQuery-->
+<script language="javascript" src="../js/jquery-1.2.6.min.js"></script><!-- llamamos al JQuery-->
 <script language="javascript">
     
      function Duplicidad(Id){
@@ -23,15 +23,9 @@
 </script>
 
 
-
-
-
-
-
-
 <center>
 	<form name="form1" action="" method="POST">
-		<table align="center" width="400" border="0" cellspacing="5" cellpadding="3" style="background:white">
+		<table align="center" width="400" border="0" cellspacing="5" cellpadding="3">
 
             <tr>
                 <td colspan=5 align="center"><h1>Registro Proveedor</h1></td>
@@ -47,11 +41,11 @@
               </select></td>
 
               <td ><div id="id_nit_duplicado"></div>
-                    <input type="text" name="id_nit" id="id_nit" size="25" maxlength="11"  required="required" placeholder="Numero" onblur="javascript:Duplicidad(this.value);" /></td>
+                    <input type="text" name="id_nit" id="id_nit" size="25" maxlength="11"  required="required" placeholder="N&uacute;mero" onblur="javascript:Duplicidad(this.value);" /></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="razon_social" id="razon_social" size="25" maxlength="30" required="required" placeholder="Razon Social" /> </td>
+                    <input type="text" name="razon_social" id="razon_social" size="25" maxlength="30" required="required" placeholder="Raz&oacute;n Social" /> </td>
 
                 <td>
                     <input type="text" name="contacto" id="contacto" size="25" maxlength="30" required="required" placeholder="Contacto"  /></td>                    
@@ -73,7 +67,7 @@
                 </td>  
 
                 <td>
-                    <input type="text" name="direccion" id="direccion" size="25" maxlength="30" required="required" placeholder="Dirección"  /></td>               
+                    <input type="text" name="direccion" id="direccion" size="25" maxlength="30" required="required" placeholder="Direcci&oacute;n"  /></td>               
             </tr>
 
             <tr>
@@ -105,12 +99,12 @@
     	<div align="center">
     		<table width="550" border="1" cellspacing="0" cellpadding="4">
     	    <tr>
-    	      <td class="style1" align="center" width="80">Identificación
+    	      <td class="style1" align="center" width="80">Identificaci&oacute;n
    	            <input name="pac" type="hidden" id="pac" value="108"/></td>
-             <td class="style1" align="center">Razón Social</td>
+             <td class="style1" align="center">Raz&oacute;n Social</td>
               <td class="style1" align="center">Telefono_1</td>
               <td class="style1" align="center">Telefono_2</td>
-              <td class="style1" align="center">Dirección</td>
+              <td class="style1" align="center">Direcci&oacute;n</td>
               <td class="style1" align="center">Email</td>
               <td class="style1" align="center">Contacto</td>
               <td class="style1" align="center">Observaciones</td>

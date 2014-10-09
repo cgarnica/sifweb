@@ -1,5 +1,5 @@
 <?php 
-    include ("../modelo/mproveedor.php");
+    include ("modelo/mproveedor.php");
     $ins = new mproveedor();
 
     $delete = isset($_GET["delete"]) ? $_GET["delete"]:NULL;
