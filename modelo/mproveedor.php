@@ -17,7 +17,7 @@ class mproveedor{
 	}
 	
 	function insert_proveedor($id_nit, $tipo_documento, $razon_social, $telefono_1, $telefono_2, $direccion, $e_mail, $observaciones, $contacto){
-        //echo "si entro";
+       echo "si entro";
         $sql = "INSERT INTO proveedor values ('".$id_nit."', '".$tipo_documento."','".$razon_social."','".$telefono_1."','".$telefono_2."','".$direccion."','".$e_mail."','".$observaciones."','".$contacto."');";
         //echo $sql;
         $this->cons($sql);
@@ -56,5 +56,26 @@ class mproveedor{
 		return $data;
 
 	}
+
+
+
+
+function selparametro1($num){
+		$sql = "SELECT idValor, descripcion, idParametro FROM valor where idValor='".$num."';";
+		$conexionBD = new conexion();
+		$conexionBD->conectarBD();
+		$data = $conexionBD->ejeCon($sql,0);
+		return $data;
+	}
+	function selparametro($a){
+		$sql = "SELECT idValor, descripcion, idParametro FROM valor WHERE idParametro='".$a."';";
+		$conexionBD = new conexion();
+		$conexionBD->conectarBD();
+		$data = $conexionBD->ejeCon($sql,0);
+		return $data;
+	}
+
+
+
 }
 ?>

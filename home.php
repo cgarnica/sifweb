@@ -18,19 +18,19 @@
                       <div id="contenidorc">
                   <div id="contcen" class="bodytext" style="padding:12px;">
 
-                        <?php
+                        <?php  
                         $Pac = isset($_GET["pac"]) ? $_GET["pac"] : NULL;
                         $Up = isset($_GET["up"]) ? $_GET["up"] : NULL;
 
                         if (is_null($Pac)) {
                              include("vista/menu.php");
+                        } else if ($Pac == "100") {
+                            include("vista/vparametro.php");
                         } else if ($Pac == "101") {
-                            include("vista/vproveedor.php");
-                        } else if ($Pac == "102") {
                             if (is_null($Up)) {
-                                include("vista/vparametro.php");
+                                include("vista/vproveedor.php");
                             } else {
-                                include("vista/vparametro1.php");
+                                include("vista/vproveedor1.php");
                             }
                         } else if ($Pac == "103") {
                             if (is_null($Up)) {

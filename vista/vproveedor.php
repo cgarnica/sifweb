@@ -13,7 +13,7 @@
         };
         $.ajax({
                 data:  doc,
-                url:   '../vista/vduplicidad.php',
+                url:   'vista/vduplicidad.php',
                 type:  'post',
                 success:  function (response) {
                         $("#id_nit_duplicado").html(response);
@@ -31,14 +31,22 @@
                 <td colspan=5 align="center"><h1>Registro Proveedor</h1></td>
             </tr>
 
-            <tr>
-                <td >Tipo de Documento
-                 <select name="tipo_documento" id="tipo_documento">
-                        <option></option>
-                        <option>Nit</option>
-                        <option>Rut</option>
-                        <option>Cedula</option>
-              </select></td>
+           <td valign="bottom">    
+    <div align="left" id="2" class="rojo">*&nbsp;Tipo de Documento:</div>
+<select name="tipo_documento" style="width: 195px;" onblur="probar(id='tipo_documento', 2)">
+    <option id="tipo_documento" value="0">Seleccione</option>
+                    <?php 
+                            //Select
+                            $dat3 = $ins->selparametro(1);
+                            for ($i=0; $i < count($dat3); $i++){
+                         ?>
+                            <option value="<?php echo $dat3[$i]['idValor'] ?>"><?php echo $dat3[$i]['descripcion'] ?></option>
+                        <?php } ?>
+          </select>
+    </td>
+
+
+
 
               <td ><div id="id_nit_duplicado"></div>
                     <input type="text" name="id_nit" id="id_nit" size="25" maxlength="11"  required="required" placeholder="N&uacute;mero" onblur="javascript:Duplicidad(this.value);" /></td>
@@ -100,7 +108,7 @@
     		<table width="550" border="1" cellspacing="0" cellpadding="4">
     	    <tr>
     	      <td class="style1" align="center" width="80">Identificaci&oacute;n
-   	            <input name="pac" type="hidden" id="pac" value="108"/></td>
+   	            <input name="pac" type="hidden" id="pac" value="101"/></td>
              <td class="style1" align="center">Raz&oacute;n Social</td>
               <td class="style1" align="center">Telefono_1</td>
               <td class="style1" align="center">Telefono_2</td>
@@ -125,7 +133,8 @@
              <td class="style2" align="center"><?php echo $dat[$i]['e_mail'] ?></td>
              <td class="style2" align="center"><?php echo $dat[$i]['contacto'] ?></td>
              <td class="style2" align="center"><?php echo $dat[$i]['observaciones'] ?></td>
-             <td align="center"><a href="../../sifweb/vista/vproveedor1.php?pr=<?php echo $dat[$i]['id_nit'] ?>&pac=108&up=11"><img border=0 src="../../Sifweb/image/editar.png" width="16" height="16" /></a></td>
+             <td align="center"><a href="home.php?pr=<?php echo $dat[$i]['id_nit'] ?>&pac=101&up=11"><img border=0 src="image/editar.png" width="16" height="16" /></a></td>
+             
 
 
 
