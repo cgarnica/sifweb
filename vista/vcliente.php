@@ -1,6 +1,6 @@
 <?php 
     include ("../controlador/ccliente.php");
-    //include ("../js/cliente.js");
+    include ("../js/cliente.js");
 ?>
 
 
@@ -12,6 +12,7 @@
       var doc = {
                 "Id" : Id
         };
+
         $.ajax({
                 data:  doc,
                 url:   '../vista/vduplicidad.php',
@@ -46,7 +47,7 @@
                 </td>
 
               <td ><div id="id_nit_duplicado"></div>
-                    <input type="text" name="documento" id="documento" size="25" maxlength="11"  required="required" placeholder="Numero del Documento"  onkeypress="return validar(event)" /></td>
+                    <input type="text" name="documento" id="documento" size="25" maxlength="11"  required="required" placeholder="Numero del Documento"  onkeypress="return validar(event);" onblur="Duplicidad(this.value)" /></td>
             </tr>
             <tr></tr>
             <tr>
