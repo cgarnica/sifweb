@@ -24,14 +24,13 @@
 
                         if (is_null($Pac)) {
                              include("vista/menu.php");
-<<<<<<< HEAD
+
                        } else if ($Pac == "101") {
                             include("vista/vproveedor.php");
                        }else if ($Pac == "102") {
                             include("vista/vtienda.php");
-								                        }
+							
 
-=======
                         } else if ($Pac == "100") {
                             include("vista/vparametro.php");
                         } else if ($Pac == "101") {
@@ -145,8 +144,6 @@
                                 include("vista/vregis.php");
                             }
 								
-                        //}
->>>>>>> f42a28070b5167e55a0a79ff88c186ace69486d1
                         
                         ?>
 
