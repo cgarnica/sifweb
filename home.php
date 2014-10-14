@@ -13,19 +13,30 @@
 	  <div id="contenedor">
 	  <div id="cabez">
 					</div>
-                    <div id="inicio">&nbsp;&nbsp;<img border=0 src="image/home.png" width="30" height="30"/></div>
+                    <div id="inicio">&nbsp;&nbsp;<a href="home.php"><img border=0 src="image/home.png" width="30" height="30"/></a></div>
                     <div id="salir">&nbsp;&nbsp;<img border=0 src="image/salir1.png" width="30" height="30"/></div>
                       <div id="contenidorc">
-					  <div id="menu">
-						  <?php
-						  include("vista/menu.php");
-						  ?>
-						 </div>
-				  </div>
+                  <div id="contcen" class="bodytext" style="padding:12px;">
+
+                        <?php  
+                        $Pac = isset($_GET["pac"]) ? $_GET["pac"] : NULL;
+                        $Up = isset($_GET["up"]) ? $_GET["up"] : NULL;
+
+                        if (is_null($Pac)) {
+                             include("vista/menu.php");
+                       } else if ($Pac == "101") {
+                            include("vista/vproveedor.php");
+                       }else if ($Pac == "102") {
+                            include("vista/vtienda.php");
+								                        }
+
+                        
+                        ?>
+
+                    </div>
+				</div>
+                </div>
 				  <div id="pie">
-  <?php
-  $perusu = isset($_SESSION["perfil"]) ? $_SESSION["perfil"]:NULL;
-  ?>
 				   </div>
 				</div>		
 		</center>	 
