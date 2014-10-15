@@ -25,11 +25,19 @@
                         if (is_null($Pac)) {
                              include("vista/menu.php");
 
-                       } else if ($Pac == "101") {
+                    } else if ($Pac == "101") {
                             include("vista/vproveedor.php");
-                       }else if ($Pac == "102") {
+                    }else if ($Pac == "102") {
                             include("vista/vtienda.php");
-					   }
+					          }else if ($Pac == "103") {
+                            if (is_null($Up)) {
+                                include("vista/vfactura.php");
+                            } else {
+                                include("vista/vfactura1.php");
+                            }
+                        }
+
+                    
 								
                         
                         ?>
